@@ -1,0 +1,17 @@
+describe('Create New Article', () => {
+    it('Log in via the Navbar, go to "Sign In", enter email and password, create a new article', () => {
+      
+      cy.visit('https://angular.realworld.io/');
+  
+      
+      cy.get('.navbar').click();
+  
+      
+      cy.contains('Sign In').click();
+  
+      
+      cy.get('input[placeholder="Email"]').type('natasha.paola13@gmail.com');
+      cy.get('input[placeholder="Password"]').type('Natasha@1303');
+  
+      
+      cy.get('button[type="submit"]').contains('Sign in').click();
